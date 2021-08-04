@@ -33,7 +33,7 @@ export default class Collectible extends React.Component {
 		let url = await NFTContract.methods.baseUri().call();
 		let price = await NFTContract.methods.priceOf(owner, id).call() * Math.pow(10, -18);
 		let creator = await NFTContract.methods.creatorOf(id).call();
-		url = "http://" + "localhost:3000/nft" + `?id=${id}`;
+		url = "http://" + url + `?id=${id}`;
 		console.log(url);
 		//stavljam sve podatke u jedan objekat
 		let collectible = {...(await axios.get(url)).data, balance, price, creator};

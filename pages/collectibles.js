@@ -28,7 +28,7 @@ export default class Browser extends React.PureComponent {
 					if(balance > 0){
 						let url = await NFTContract.methods.baseUri().call();
 						let price = await NFTContract.methods.priceOf(owners[k], i).call() * Math.pow(10, -18);
-						url = "http://" + 'localhost:3000/nft' + `?id=${i}`;
+						url = "http://" + url + `?id=${i}`;
 						console.log(url);
 						//stavljam sve podatke u jedan objekat
 						collectibles[j] = {...(await axios.get(url)).data, balance, 
