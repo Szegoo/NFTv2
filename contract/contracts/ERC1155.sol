@@ -178,7 +178,11 @@ contract ERC1155 is IERC1155 {
         } else {
             balances[from][id].balance -= amount;
         }
-        balances[to][id].balance += amount;
+        if (balances[to][id].balance == 0) {
+            balances[to][id] = Token(amount, balances[from][id].price);
+        } else {
+            balances[to][id].balance += amount;
+        }
         owners[id].push(to);
 
         emit TransferSingle(msg.sender, from, to, id, amount);
@@ -361,8 +365,17 @@ contract ERC1155 is IERC1155 {
             balances[msg.sender][request.confirmerTokenId].balance -= request
                 .confirmerAmount;
         }
-        balances[request.initializer][request.confirmerTokenId]
-            .balance += request.confirmerAmount;
+        if (
+            balances[request.initializer][request.confirmerTokenId].balance == 0
+        ) {
+            balances[request.initializer][request.confirmerTokenId] = Token(
+                request.confirmerAmount,
+                balances[request.confirmer][request.confirmerTokenId].price
+            );
+        } else {
+            balances[request.initializer][request.confirmerTokenId]
+                .balance += request.confirmerAmount;
+        }
         owners[request.confirmerTokenId].push(request.initializer);
 
         //sending to confirmer
@@ -388,8 +401,17 @@ contract ERC1155 is IERC1155 {
             balances[request.initializer][request.initializerTokenId]
                 .balance -= request.initializerAmount;
         }
-        balances[request.confirmer][request.initializerTokenId]
-            .balance += request.initializerAmount;
+        if (
+            balances[request.confirmer][request.initializerTokenId].balance == 0
+        ) {
+            balances[request.confirmer][request.initializerTokenId] = Token(
+                request.initializerAmount,
+                balances[request.initializer][request.initializerTokenId].price
+            );
+        } else {
+            balances[request.confirmer][request.initializerTokenId]
+                .balance += request.initializerAmount;
+        }
         owners[request.initializerTokenId].push(request.confirmer);
     }
 
