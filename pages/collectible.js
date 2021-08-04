@@ -49,8 +49,8 @@ export default class Collectible extends React.Component {
 		const accounts = await window.ethereum.enable();
 		const account = accounts[0];
 		const NFTContract = new web3.eth.Contract(ABI, contractAddress, {from: account});
-		let value = await new BigNumber((collectible.price * Math.pow(10, 18)) * kolicina).toString();
-		let newPrice = await new BigNumber(sellPrice*Math.pow(10,18));
+		let value = await BigNumber((collectible.price * Math.pow(10, 18)) * kolicina).toString();
+		let newPrice = await BigNumber(sellPrice*Math.pow(10,18)).toString();
 		NFTContract.methods.buy(id, owner, kolicina, newPrice).send({
 			value
 		}).then(() => {
