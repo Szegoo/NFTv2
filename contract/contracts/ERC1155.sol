@@ -346,6 +346,17 @@ contract ERC1155 is IERC1155 {
             "The balance of the requester is insufficient"
         );
         if (
+            balances[request.initializer][request.confirmerTokenId].balance == 0
+        ) {
+            balances[request.initializer][request.confirmerTokenId] = Token(
+                request.confirmerAmount,
+                balances[request.confirmer][request.confirmerTokenId].price
+            );
+        } else {
+            balances[request.initializer][request.confirmerTokenId]
+                .balance += request.confirmerAmount;
+        }
+        if (
             balances[msg.sender][request.confirmerTokenId].balance -
                 request.confirmerAmount ==
             0
@@ -365,20 +376,20 @@ contract ERC1155 is IERC1155 {
             balances[msg.sender][request.confirmerTokenId].balance -= request
                 .confirmerAmount;
         }
-        if (
-            balances[request.initializer][request.confirmerTokenId].balance == 0
-        ) {
-            balances[request.initializer][request.confirmerTokenId] = Token(
-                request.confirmerAmount,
-                balances[request.confirmer][request.confirmerTokenId].price
-            );
-        } else {
-            balances[request.initializer][request.confirmerTokenId]
-                .balance += request.confirmerAmount;
-        }
         owners[request.confirmerTokenId].push(request.initializer);
 
         //sending to confirmer
+        if (
+            balances[request.confirmer][request.initializerTokenId].balance == 0
+        ) {
+            balances[request.confirmer][request.initializerTokenId] = Token(
+                request.initializerAmount,
+                balances[request.initializer][request.initializerTokenId].price
+            );
+        } else {
+            balances[request.confirmer][request.initializerTokenId]
+                .balance += request.initializerAmount;
+        }
         if (
             balances[request.initializer][request.initializerTokenId].balance -
                 request.initializerAmount ==
@@ -401,18 +412,8 @@ contract ERC1155 is IERC1155 {
             balances[request.initializer][request.initializerTokenId]
                 .balance -= request.initializerAmount;
         }
-        if (
-            balances[request.confirmer][request.initializerTokenId].balance == 0
-        ) {
-            balances[request.confirmer][request.initializerTokenId] = Token(
-                request.initializerAmount,
-                balances[request.initializer][request.initializerTokenId].price
-            );
-        } else {
-            balances[request.confirmer][request.initializerTokenId]
-                .balance += request.initializerAmount;
-        }
         owners[request.initializerTokenId].push(request.confirmer);
+        delete requests[swapRequestId];
     }
 
     function supportsInterface(bytes4 interfaceId)
