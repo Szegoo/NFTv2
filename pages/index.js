@@ -29,7 +29,8 @@ export default class Index extends React.PureComponent {
 			const nextId = Number(lastId);
 			this.collectible.set("id", nextId);
 			//cenu mnozim sa 10^18 post je 1eth = 10^18 wei
-			NFTContract.methods.mint(kolicina,BigNumber(cena*Math.pow(10, 18))).send().then(async(response) => {
+			let price = await new BigNumber(cena*Math.pow(10, 18));
+			NFTContract.methods.mint(kolicina, price).send().then(async(response) => {
 				await axios.post("/api/add-nft", this.collectible);
 				console.log(response);
 				//pozivam opet da bi se dodao novi token
