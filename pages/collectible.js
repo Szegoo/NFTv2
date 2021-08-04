@@ -33,7 +33,7 @@ export default class Collectible extends React.Component {
 		let url = await NFTContract.methods.baseUri().call();
 		let price = await NFTContract.methods.priceOf(owner, id).call() * Math.pow(10, -18);
 		let creator = await NFTContract.methods.creatorOf(id).call();
-		url = "http://" + url + `?id=${id}`;
+		url = "http://" + "localhost:3000/nft" + `?id=${id}`;
 		console.log(url);
 		//stavljam sve podatke u jedan objekat
 		let collectible = {...(await axios.get(url)).data, balance, price, creator};
@@ -62,8 +62,6 @@ export default class Collectible extends React.Component {
 		const {tokenId, yourAmountForSwap, amountForSwap} = this.state;
 		const accounts = await window.ethereum.enable();
 		const account = accounts[0];
-        console.log(`id:${id}, tokenId: ${tokenId}, youramount: ${yourAmountForSwap}, 
-        amount: ${amountForSwap}, owner: ${owner}`);
 		const NFTContract = new web3.eth.Contract(ABI, contractAddress, {from: account});
         NFTContract.methods.createSwapRequest(tokenId, yourAmountForSwap, id, amountForSwap, owner).send().then(()=>{
             this.setState({alert: true});
@@ -94,13 +92,15 @@ export default class Collectible extends React.Component {
 							</div>
 							:
 							<div>  
-								<input onChange={this.handleChange} name="tokenId" type="number" placeholder="token koji zelis da zamenis"/>
+								<input onChange={this.handleChange} name="tokenId" type="number" placeholder="Token koji nudim"/>
 								<p style={{color: "gray"}}>(id od tog tokena)</p>
-								<input onChange={this.handleChange} name="yourAmountForSwap" type="number" placeholder="kolicina tvog tokena"/>
-								<input onChange={this.handleChange} name="amountForSwap" type="number" placeholder="kolicina tokena koji zelis"/>
-								<p style={{color: "gray"}}>(kolicina tokena koju hoces da dobijes)</p>
+								<input onChange={this.handleChange} name="yourAmountForSwap" type="number" placeholder="Kolicina koju nudim"/>
+								<h3>Za</h3>
+								<input onChange={this.handleChange} name="amountForSwap" type="number" placeholder="kolicina koju trazim za uzvrat"/>
 								<button onClick={this.handleRequest}>Pokusaj da zamenis</button>
 								<p style={{color: "gray"}}>(treba da sacekas potvrdu vlasnika tokena)</p>
+								<p style={{color: "gray"}}>(Contract ne proverava sada balance, <br/> 
+								provera se vrsi tokom potvrde zamene)</p>
 							</div>
 						}
                         {alert&&

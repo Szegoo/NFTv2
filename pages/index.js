@@ -14,7 +14,8 @@ export default class Index extends React.PureComponent {
 		kolicina: 0,
 		collectibles: null,
 		title: "",
-		requests: null
+		requests: null,
+		creations: null
 	}
 	componentDidMount() {
 		this.collectible = new FormData();
@@ -43,16 +44,28 @@ export default class Index extends React.PureComponent {
 		const account = accounts[0];
 		const NFTContract = new web3.eth.Contract(ABI, contractAddress, {from: account});
 		let collectibles = [];
+/* 		let creations = []; */
 		const lastId = await NFTContract.methods.lastId().call();
  		for(let i = 1, j=0; i <= lastId; i++) {
 			const balance = await NFTContract.methods.balanceOf(account, i).call();
+/* 			const creatorOf = await NFTContract.methods.creatorOf(i).call(); */
+			/* if(creatorOf.toLowerCase() === account.toLowerCase() && balance == 0) {
+				console.log('hey');
+				let url = await NFTContract.methods.baseUri().call();
+				url = "http://" + 'localhost:3000/nft' + `?id=${i}`;
+				let {data} = await axios.get(url);
+				creations.push(data.image);
+			} */
 			if(balance > 0) {
 				let url = await NFTContract.methods.baseUri().call();
 				let price = await NFTContract.methods.priceOf(account, i).call() * Math.pow(10, -18);
-				url = "http://" + url + `?id=${i}`;
+				url = "http://" + 'localhost:3000/nft' + `?id=${i}`;
 				console.log(url);
 				//stavljam sve podatke u jedan objekat
 				collectibles[j] = {...(await axios.get(url)).data, balance, price};
+/* 				if(creatorOf.toLowerCase() === account.toLowerCase()) {
+					creations.push(collectibles[j].image);
+				} */
 				j++;
 			}
 		} 
@@ -69,7 +82,6 @@ export default class Index extends React.PureComponent {
 	}
 	render() {
 		let {collectibles, requests} = this.state;
-		console.log(requests);
 		return (
 			<div>
 				<h1 className="title">

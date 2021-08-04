@@ -295,7 +295,7 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.6+commit.11564f7e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAll\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"},{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"values\",\"type\":\"uint256[]\"}],\"name\":\"TransferBatch\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"TransferSingle\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"value\",\"type\":\"string\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"URI\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"accounts\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"}],\"name\":\"balanceOfBatch\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"amounts\",\"type\":\"uint256[]\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeBatchTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAll\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"supportsInterface(bytes4)\":{\"details\":\"Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/sakac/Desktop/NFTv2/truffle/contracts/ERC1155.sol\":\"IERC1155\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/sakac/Desktop/NFTv2/truffle/contracts/ERC1155.sol\":{\"keccak256\":\"0x11bce5ee60f320a3931da1622b930ece97fe42117d861c33af95e3d3fdb15216\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5b7188f71fddc4d2ec26aa3346e038c44d7969bbd56ab0157842f7ad80d7c868\",\"dweb:/ipfs/QmfYo1UMwrM74zQMPV4LPHRWfethWfGg2Hn75H8FxZvJ2E\"]},\"@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol\":{\"keccak256\":\"0x7de6e64d4a8075e803a972cc77c4c91463e0c3777e4110eacfb5d4a71759b2fa\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b83b3b09ef36374c1c104ee896797dadf2e81466d2143b481d3f1ddc7d9f3873\",\"dweb:/ipfs/QmSWtqs28RHDezRWBbmEfqiPYwsGTKj44NRbuxvZ96cqMU\"]},\"@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0xa28007762d9da9db878dd421960c8cb9a10471f47ab5c1b3309bfe48e9e79ff4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://796ab6e88af7bf0e78def0f059310c903af6a312b565344e0ff524a0f26e81c6\",\"dweb:/ipfs/QmcsVgLgzWdor3UnAztUkXKNGcysm1MPneWksF72AvnwBx\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.6+commit.11564f7e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAll\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"},{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"values\",\"type\":\"uint256[]\"}],\"name\":\"TransferBatch\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"TransferSingle\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"value\",\"type\":\"string\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"URI\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"accounts\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"}],\"name\":\"balanceOfBatch\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"amounts\",\"type\":\"uint256[]\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeBatchTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAll\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"supportsInterface(bytes4)\":{\"details\":\"Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/sakac/Desktop/NFTv2/contract/contracts/ERC1155.sol\":\"IERC1155\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/sakac/Desktop/NFTv2/contract/contracts/ERC1155.sol\":{\"keccak256\":\"0x11bce5ee60f320a3931da1622b930ece97fe42117d861c33af95e3d3fdb15216\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5b7188f71fddc4d2ec26aa3346e038c44d7969bbd56ab0157842f7ad80d7c868\",\"dweb:/ipfs/QmfYo1UMwrM74zQMPV4LPHRWfethWfGg2Hn75H8FxZvJ2E\"]},\"@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol\":{\"keccak256\":\"0x7de6e64d4a8075e803a972cc77c4c91463e0c3777e4110eacfb5d4a71759b2fa\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b83b3b09ef36374c1c104ee896797dadf2e81466d2143b481d3f1ddc7d9f3873\",\"dweb:/ipfs/QmSWtqs28RHDezRWBbmEfqiPYwsGTKj44NRbuxvZ96cqMU\"]},\"@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0xa28007762d9da9db878dd421960c8cb9a10471f47ab5c1b3309bfe48e9e79ff4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://796ab6e88af7bf0e78def0f059310c903af6a312b565344e0ff524a0f26e81c6\",\"dweb:/ipfs/QmcsVgLgzWdor3UnAztUkXKNGcysm1MPneWksF72AvnwBx\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -304,9 +304,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.0;\r\nimport \"@openzeppelin/contracts/utils/introspection/IERC165.sol\";\r\nimport \"@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol\";\r\n\r\ninterface IERC1155 is IERC165 {\r\n    event TransferSingle(\r\n        address indexed operator,\r\n        address indexed from,\r\n        address indexed to,\r\n        uint256 id,\r\n        uint256 value\r\n    );\r\n    event TransferBatch(\r\n        address indexed operator,\r\n        address indexed from,\r\n        address indexed to,\r\n        uint256[] ids,\r\n        uint256[] values\r\n    );\r\n    event ApprovalForAll(\r\n        address indexed account,\r\n        address indexed operator,\r\n        bool approved\r\n    );\r\n    event URI(string value, uint256 indexed id);\r\n\r\n    function balanceOf(address account, uint256 id)\r\n        external\r\n        view\r\n        returns (uint256);\r\n\r\n    function balanceOfBatch(address[] calldata accounts, uint256[] calldata ids)\r\n        external\r\n        view\r\n        returns (uint256[] memory);\r\n\r\n    function setApprovalForAll(address operator, bool approved) external;\r\n\r\n    function isApprovedForAll(address account, address operator)\r\n        external\r\n        view\r\n        returns (bool);\r\n\r\n    function safeTransferFrom(\r\n        address from,\r\n        address to,\r\n        uint256 id,\r\n        uint256 amount,\r\n        bytes calldata data\r\n    ) external;\r\n\r\n    function safeBatchTransferFrom(\r\n        address from,\r\n        address to,\r\n        uint256[] calldata ids,\r\n        uint256[] calldata amounts,\r\n        bytes calldata data\r\n    ) external;\r\n}\r\n\r\ncontract ERC1155 is IERC1155 {\r\n    struct Token {\r\n        uint256 balance;\r\n        uint256 price;\r\n    }\r\n    struct SwapRequest {\r\n        uint256 id;\r\n        address initializer;\r\n        address confirmer;\r\n        uint256 confirmerTokenId;\r\n        uint256 confirmerAmount;\r\n        uint256 initializerTokenId;\r\n        uint256 initializerAmount;\r\n    }\r\n    string public baseUri = \"\";\r\n    uint256 public lastId = 1;\r\n    //address => tokenId => amount\r\n    mapping(address => mapping(uint256 => Token)) public balances;\r\n    //real owner => account => is allowed to spend owners balance? yes | no\r\n    mapping(address => mapping(address => bool)) public approvals;\r\n    //tokenId => creator of the token\r\n    mapping(uint256 => address) public creators;\r\n    //array of swap requests\r\n    SwapRequest[] public requests;\r\n    //tokenId => owners\r\n    mapping(uint256 => address[]) owners;\r\n\r\n    constructor(string memory uri) {\r\n        baseUri = uri;\r\n    }\r\n\r\n    function balanceOf(address account, uint256 id)\r\n        public\r\n        view\r\n        override\r\n        returns (uint256)\r\n    {\r\n        return balances[account][id].balance;\r\n    }\r\n\r\n    function priceOf(address account, uint256 id)\r\n        public\r\n        view\r\n        returns (uint256)\r\n    {\r\n        return balances[account][id].price;\r\n    }\r\n\r\n    function getRequests() public view returns (SwapRequest[] memory) {\r\n        return requests;\r\n    }\r\n\r\n    function creatorOf(uint256 id) public view returns (address) {\r\n        return creators[id];\r\n    }\r\n\r\n    function ownersOf(uint256 tokenId) public view returns (address[] memory) {\r\n        return owners[tokenId];\r\n    }\r\n\r\n    function balanceOfBatch(address[] memory accounts, uint256[] memory ids)\r\n        public\r\n        view\r\n        override\r\n        returns (uint256[] memory)\r\n    {\r\n        require(\r\n            accounts.length == ids.length,\r\n            \"The length of ids needs to be equal to length of ammounts\"\r\n        );\r\n        uint256[] memory batchBalances = new uint256[](accounts.length);\r\n        for (uint256 i = 0; i <= accounts.length; i++) {\r\n            batchBalances[i] = balanceOf(accounts[i], ids[i]);\r\n        }\r\n        return batchBalances;\r\n    }\r\n\r\n    function setApprovalForAll(address operator, bool approved)\r\n        public\r\n        override\r\n    {\r\n        approvals[msg.sender][operator] = approved;\r\n        emit ApprovalForAll(msg.sender, operator, approved);\r\n    }\r\n\r\n    function isApprovedForAll(address account, address operator)\r\n        public\r\n        view\r\n        override\r\n        returns (bool)\r\n    {\r\n        return approvals[account][operator];\r\n    }\r\n\r\n    function safeTransferFrom(\r\n        address from,\r\n        address to,\r\n        uint256 id,\r\n        uint256 amount,\r\n        bytes memory data\r\n    ) public override {\r\n        require(to != address(0), \"You can't make a transfer to address 0\");\r\n        require(from == msg.sender || approvals[from][msg.sender] == true, \"\");\r\n        require(\r\n            balances[from][id].balance >= amount,\r\n            \"Your balance is insufficient\"\r\n        );\r\n        if (balances[from][id].balance - amount == 0) {\r\n            delete balances[from][id];\r\n            //removes the address from the owners array\r\n            for (uint256 i = 0; i < owners[id].length; i++) {\r\n                if (owners[id][i] == from) {\r\n                    delete owners[id][i];\r\n                }\r\n            }\r\n        } else {\r\n            balances[from][id].balance -= amount;\r\n        }\r\n        balances[to][id].balance += amount;\r\n        owners[id].push(to);\r\n\r\n        emit TransferSingle(msg.sender, from, to, id, amount);\r\n        if (isContract(to)) {\r\n            try\r\n                IERC1155Receiver(to).onERC1155Received(\r\n                    msg.sender,\r\n                    from,\r\n                    id,\r\n                    amount,\r\n                    data\r\n                )\r\n            returns (bytes4 response) {\r\n                if (response != IERC1155Receiver.onERC1155Received.selector) {\r\n                    revert(\"ERC1155Receiver rejected tokens :(\");\r\n                }\r\n            } catch Error(string memory reason) {\r\n                revert(reason);\r\n            } catch {\r\n                revert(\"You can't transfer to non ERC1155Receiver contract\");\r\n            }\r\n        }\r\n    }\r\n\r\n    function safeBatchTransferFrom(\r\n        address from,\r\n        address to,\r\n        uint256[] calldata ids,\r\n        uint256[] calldata amounts,\r\n        bytes calldata data\r\n    ) public override {\r\n        require(to != address(0), \"You can't make a transfer to address 0\");\r\n        require(\r\n            ids.length == amounts.length,\r\n            \"The length of ids needs to be equal to length of ammounts\"\r\n        );\r\n        for (uint256 i = 0; i <= ids.length; i++) {\r\n            require(\r\n                msg.sender == from || approvals[from][msg.sender] == true,\r\n                \"You are not allowed to do this!\"\r\n            );\r\n            require(\r\n                balances[from][ids[i]].balance >= amounts[i],\r\n                \"Your balance is insufficient!\"\r\n            );\r\n            if (balances[from][ids[i]].balance - amounts[i] == 0) {\r\n                delete balances[from][ids[i]];\r\n                //removes the address from the owners array\r\n                for (uint256 j = 0; j < owners[ids[i]].length; j++) {\r\n                    if (owners[ids[i]][j] == from) {\r\n                        delete owners[ids[i]][j];\r\n                    }\r\n                }\r\n            } else {\r\n                balances[from][ids[i]].balance -= amounts[i];\r\n            }\r\n            balances[to][ids[i]].balance += amounts[i];\r\n        }\r\n        emit TransferBatch(msg.sender, from, to, ids, amounts);\r\n        if (isContract(to)) {\r\n            try\r\n                IERC1155Receiver(to).onERC1155BatchReceived(\r\n                    msg.sender,\r\n                    from,\r\n                    ids,\r\n                    amounts,\r\n                    data\r\n                )\r\n            returns (bytes4 response) {\r\n                if (\r\n                    response != IERC1155Receiver.onERC1155BatchReceived.selector\r\n                ) {\r\n                    revert(\"ERC1155Receiver rejected tokens :(\");\r\n                }\r\n            } catch Error(string memory reason) {\r\n                revert(reason);\r\n            } catch {\r\n                revert(\"You can't transfer to non ERC1155Receiver contract\");\r\n            }\r\n        }\r\n    }\r\n\r\n    function mint(uint256 amount, uint256 price) public {\r\n        require(amount > 0, \"Amount needs to be bigger than 0\");\r\n        balances[msg.sender][lastId] = Token(amount, price);\r\n        creators[lastId] = msg.sender;\r\n        owners[lastId].push(msg.sender);\r\n        lastId++;\r\n    }\r\n\r\n    function buy(\r\n        uint256 tokenId,\r\n        address from,\r\n        uint256 amount,\r\n        uint256 sellPrice\r\n    ) public payable {\r\n        require(\r\n            msg.value >= balances[from][tokenId].price * amount,\r\n            \"Ova kolicina ethereuma nije dovoljna za ovu tranzakciju!\"\r\n        );\r\n        //checks if the seller sold all of his tokens\r\n        if (balances[from][tokenId].balance == amount) {\r\n            delete balances[from][tokenId];\r\n            //removes the address from the owners array\r\n            for (uint256 i = 0; i < owners[tokenId].length; i++) {\r\n                if (owners[tokenId][i] == from) {\r\n                    delete owners[tokenId][i];\r\n                }\r\n            }\r\n        } else {\r\n            balances[from][tokenId].balance -= amount;\r\n        }\r\n        if (balances[msg.sender][tokenId].balance == 0) {\r\n            balances[msg.sender][tokenId] = Token(amount, sellPrice);\r\n            owners[tokenId].push(msg.sender);\r\n        } else {\r\n            balances[msg.sender][tokenId].balance += amount;\r\n            balances[msg.sender][tokenId].price = sellPrice;\r\n        }\r\n        if (from == creators[tokenId]) {\r\n            payable(from).transfer(msg.value);\r\n        } else {\r\n            uint256 fee = msg.value / 10;\r\n            payable(creators[tokenId]).transfer(fee);\r\n            payable(from).transfer(msg.value - fee);\r\n        }\r\n    }\r\n\r\n    function createSwapRequest(\r\n        uint256 yourTokenId,\r\n        uint256 yourAmount,\r\n        uint256 confirmerTokenId,\r\n        uint256 confirmerAmount,\r\n        address confirmer\r\n    ) public {\r\n        requests.push(\r\n            SwapRequest(\r\n                requests.length,\r\n                msg.sender,\r\n                confirmer,\r\n                confirmerTokenId,\r\n                confirmerAmount,\r\n                yourTokenId,\r\n                yourAmount\r\n            )\r\n        );\r\n    }\r\n\r\n    function confirmSwapRequest(uint256 swapRequestId) public {\r\n        //sending to initializer\r\n        SwapRequest memory request = requests[swapRequestId];\r\n        require(msg.sender == request.confirmer);\r\n        require(\r\n            balances[msg.sender][request.confirmerTokenId].balance >=\r\n                request.confirmerAmount,\r\n            \"Your balance is insufficient\"\r\n        );\r\n        require(\r\n            balances[request.initializer][request.initializerTokenId].balance >=\r\n                request.initializerAmount,\r\n            \"The balance of the requester is insufficient\"\r\n        );\r\n        if (\r\n            balances[msg.sender][request.confirmerTokenId].balance -\r\n                request.confirmerAmount ==\r\n            0\r\n        ) {\r\n            delete balances[msg.sender][request.confirmerTokenId];\r\n            //removes the address from the owners array\r\n            for (\r\n                uint256 i = 0;\r\n                i < owners[request.confirmerTokenId].length;\r\n                i++\r\n            ) {\r\n                if (owners[request.confirmerTokenId][i] == msg.sender) {\r\n                    delete owners[request.confirmerTokenId][i];\r\n                }\r\n            }\r\n        } else {\r\n            balances[msg.sender][request.confirmerTokenId].balance -= request\r\n                .confirmerAmount;\r\n        }\r\n        balances[request.initializer][request.confirmerTokenId]\r\n            .balance += request.confirmerAmount;\r\n        owners[request.confirmerTokenId].push(request.initializer);\r\n\r\n        //sending to confirmer\r\n        if (\r\n            balances[request.initializer][request.initializerTokenId].balance -\r\n                request.initializerAmount ==\r\n            0\r\n        ) {\r\n            delete balances[request.initializer][request.initializerTokenId];\r\n            //removes the address from the owners array\r\n            for (\r\n                uint256 i = 0;\r\n                i < owners[request.initializerTokenId].length;\r\n                i++\r\n            ) {\r\n                if (\r\n                    owners[request.initializerTokenId][i] == request.initializer\r\n                ) {\r\n                    delete owners[request.initializerTokenId][i];\r\n                }\r\n            }\r\n        } else {\r\n            balances[request.initializer][request.initializerTokenId]\r\n                .balance -= request.initializerAmount;\r\n        }\r\n        balances[request.confirmer][request.initializerTokenId]\r\n            .balance += request.initializerAmount;\r\n        owners[request.initializerTokenId].push(request.confirmer);\r\n    }\r\n\r\n    function supportsInterface(bytes4 interfaceId)\r\n        public\r\n        view\r\n        override\r\n        returns (bool)\r\n    {\r\n        return interfaceId == type(IERC1155).interfaceId;\r\n    }\r\n\r\n    function isContract(address _address) private returns (bool) {\r\n        uint32 size;\r\n        assembly {\r\n            size := extcodesize(_address)\r\n        }\r\n        return (size > 0);\r\n    }\r\n}\r\n",
-  "sourcePath": "C:/Users/sakac/Desktop/NFTv2/truffle/contracts/ERC1155.sol",
+  "sourcePath": "C:/Users/sakac/Desktop/NFTv2/contract/contracts/ERC1155.sol",
   "ast": {
-    "absolutePath": "/C/Users/sakac/Desktop/NFTv2/truffle/contracts/ERC1155.sol",
+    "absolutePath": "/C/Users/sakac/Desktop/NFTv2/contract/contracts/ERC1155.sol",
     "exportedSymbols": {
       "ERC1155": [
         1293
@@ -315,10 +315,10 @@
         111
       ],
       "IERC1155Receiver": [
-        1334
+        1367
       ],
       "IERC165": [
-        1346
+        1379
       ]
     },
     "id": 1294,
@@ -343,7 +343,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 1294,
-        "sourceUnit": 1347,
+        "sourceUnit": 1380,
         "src": "60:65:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -355,7 +355,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 1294,
-        "sourceUnit": 1335,
+        "sourceUnit": 1368,
         "src": "127:68:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -368,7 +368,7 @@
               "id": 4,
               "name": "IERC165",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1346,
+              "referencedDeclaration": 1379,
               "src": "221:7:0"
             },
             "id": 5,
@@ -382,7 +382,7 @@
         "id": 111,
         "linearizedBaseContracts": [
           111,
-          1346
+          1379
         ],
         "name": "IERC1155",
         "nameLocation": "209:8:0",
@@ -1714,7 +1714,7 @@
         "linearizedBaseContracts": [
           1293,
           111,
-          1346
+          1379
         ],
         "name": "ERC1155",
         "nameLocation": "1615:7:0",
@@ -6234,10 +6234,10 @@
                                           "name": "IERC1155Receiver",
                                           "nodeType": "Identifier",
                                           "overloadedDeclarations": [],
-                                          "referencedDeclaration": 1334,
+                                          "referencedDeclaration": 1367,
                                           "src": "5626:16:0",
                                           "typeDescriptions": {
-                                            "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$1334_$",
+                                            "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$1367_$",
                                             "typeString": "type(contract IERC1155Receiver)"
                                           }
                                         },
@@ -6248,7 +6248,7 @@
                                         "lValueRequested": false,
                                         "memberName": "onERC1155Received",
                                         "nodeType": "MemberAccess",
-                                        "referencedDeclaration": 1315,
+                                        "referencedDeclaration": 1348,
                                         "src": "5626:34:0",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_function_declaration_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_bytes_calldata_ptr_$returns$_t_bytes4_$",
@@ -6689,10 +6689,10 @@
                                 "name": "IERC1155Receiver",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 1334,
+                                "referencedDeclaration": 1367,
                                 "src": "5353:16:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$1334_$",
+                                  "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$1367_$",
                                   "typeString": "type(contract IERC1155Receiver)"
                                 }
                               },
@@ -6707,7 +6707,7 @@
                               "src": "5353:20:0",
                               "tryCall": false,
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_IERC1155Receiver_$1334",
+                                "typeIdentifier": "t_contract$_IERC1155Receiver_$1367",
                                 "typeString": "contract IERC1155Receiver"
                               }
                             },
@@ -6718,7 +6718,7 @@
                             "lValueRequested": false,
                             "memberName": "onERC1155Received",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1315,
+                            "referencedDeclaration": 1348,
                             "src": "5353:38:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes4_$",
@@ -9138,10 +9138,10 @@
                                           "name": "IERC1155Receiver",
                                           "nodeType": "Identifier",
                                           "overloadedDeclarations": [],
-                                          "referencedDeclaration": 1334,
+                                          "referencedDeclaration": 1367,
                                           "src": "7773:16:0",
                                           "typeDescriptions": {
-                                            "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$1334_$",
+                                            "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$1367_$",
                                             "typeString": "type(contract IERC1155Receiver)"
                                           }
                                         },
@@ -9152,7 +9152,7 @@
                                         "lValueRequested": false,
                                         "memberName": "onERC1155BatchReceived",
                                         "nodeType": "MemberAccess",
-                                        "referencedDeclaration": 1333,
+                                        "referencedDeclaration": 1366,
                                         "src": "7773:39:0",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_function_declaration_nonpayable$_t_address_$_t_address_$_t_array$_t_uint256_$dyn_calldata_ptr_$_t_array$_t_uint256_$dyn_calldata_ptr_$_t_bytes_calldata_ptr_$returns$_t_bytes4_$",
@@ -9593,10 +9593,10 @@
                                 "name": "IERC1155Receiver",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 1334,
+                                "referencedDeclaration": 1367,
                                 "src": "7471:16:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$1334_$",
+                                  "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$1367_$",
                                   "typeString": "type(contract IERC1155Receiver)"
                                 }
                               },
@@ -9611,7 +9611,7 @@
                               "src": "7471:20:0",
                               "tryCall": false,
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_IERC1155Receiver_$1334",
+                                "typeIdentifier": "t_contract$_IERC1155Receiver_$1367",
                                 "typeString": "contract IERC1155Receiver"
                               }
                             },
@@ -9622,7 +9622,7 @@
                             "lValueRequested": false,
                             "memberName": "onERC1155BatchReceived",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1333,
+                            "referencedDeclaration": 1366,
                             "src": "7471:43:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_array$_t_uint256_$dyn_memory_ptr_$_t_array$_t_uint256_$dyn_memory_ptr_$_t_bytes_memory_ptr_$returns$_t_bytes4_$",
@@ -16136,7 +16136,7 @@
           },
           {
             "baseFunctions": [
-              1345
+              1378
             ],
             "body": {
               "id": 1274,
@@ -16590,7 +16590,7 @@
     "src": "35:13362:0"
   },
   "legacyAST": {
-    "absolutePath": "/C/Users/sakac/Desktop/NFTv2/truffle/contracts/ERC1155.sol",
+    "absolutePath": "/C/Users/sakac/Desktop/NFTv2/contract/contracts/ERC1155.sol",
     "exportedSymbols": {
       "ERC1155": [
         1293
@@ -16599,10 +16599,10 @@
         111
       ],
       "IERC1155Receiver": [
-        1334
+        1367
       ],
       "IERC165": [
-        1346
+        1379
       ]
     },
     "id": 1294,
@@ -16627,7 +16627,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 1294,
-        "sourceUnit": 1347,
+        "sourceUnit": 1380,
         "src": "60:65:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -16639,7 +16639,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 1294,
-        "sourceUnit": 1335,
+        "sourceUnit": 1368,
         "src": "127:68:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -16652,7 +16652,7 @@
               "id": 4,
               "name": "IERC165",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1346,
+              "referencedDeclaration": 1379,
               "src": "221:7:0"
             },
             "id": 5,
@@ -16666,7 +16666,7 @@
         "id": 111,
         "linearizedBaseContracts": [
           111,
-          1346
+          1379
         ],
         "name": "IERC1155",
         "nameLocation": "209:8:0",
@@ -17998,7 +17998,7 @@
         "linearizedBaseContracts": [
           1293,
           111,
-          1346
+          1379
         ],
         "name": "ERC1155",
         "nameLocation": "1615:7:0",
@@ -22518,10 +22518,10 @@
                                           "name": "IERC1155Receiver",
                                           "nodeType": "Identifier",
                                           "overloadedDeclarations": [],
-                                          "referencedDeclaration": 1334,
+                                          "referencedDeclaration": 1367,
                                           "src": "5626:16:0",
                                           "typeDescriptions": {
-                                            "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$1334_$",
+                                            "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$1367_$",
                                             "typeString": "type(contract IERC1155Receiver)"
                                           }
                                         },
@@ -22532,7 +22532,7 @@
                                         "lValueRequested": false,
                                         "memberName": "onERC1155Received",
                                         "nodeType": "MemberAccess",
-                                        "referencedDeclaration": 1315,
+                                        "referencedDeclaration": 1348,
                                         "src": "5626:34:0",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_function_declaration_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_bytes_calldata_ptr_$returns$_t_bytes4_$",
@@ -22973,10 +22973,10 @@
                                 "name": "IERC1155Receiver",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 1334,
+                                "referencedDeclaration": 1367,
                                 "src": "5353:16:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$1334_$",
+                                  "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$1367_$",
                                   "typeString": "type(contract IERC1155Receiver)"
                                 }
                               },
@@ -22991,7 +22991,7 @@
                               "src": "5353:20:0",
                               "tryCall": false,
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_IERC1155Receiver_$1334",
+                                "typeIdentifier": "t_contract$_IERC1155Receiver_$1367",
                                 "typeString": "contract IERC1155Receiver"
                               }
                             },
@@ -23002,7 +23002,7 @@
                             "lValueRequested": false,
                             "memberName": "onERC1155Received",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1315,
+                            "referencedDeclaration": 1348,
                             "src": "5353:38:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes4_$",
@@ -25422,10 +25422,10 @@
                                           "name": "IERC1155Receiver",
                                           "nodeType": "Identifier",
                                           "overloadedDeclarations": [],
-                                          "referencedDeclaration": 1334,
+                                          "referencedDeclaration": 1367,
                                           "src": "7773:16:0",
                                           "typeDescriptions": {
-                                            "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$1334_$",
+                                            "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$1367_$",
                                             "typeString": "type(contract IERC1155Receiver)"
                                           }
                                         },
@@ -25436,7 +25436,7 @@
                                         "lValueRequested": false,
                                         "memberName": "onERC1155BatchReceived",
                                         "nodeType": "MemberAccess",
-                                        "referencedDeclaration": 1333,
+                                        "referencedDeclaration": 1366,
                                         "src": "7773:39:0",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_function_declaration_nonpayable$_t_address_$_t_address_$_t_array$_t_uint256_$dyn_calldata_ptr_$_t_array$_t_uint256_$dyn_calldata_ptr_$_t_bytes_calldata_ptr_$returns$_t_bytes4_$",
@@ -25877,10 +25877,10 @@
                                 "name": "IERC1155Receiver",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 1334,
+                                "referencedDeclaration": 1367,
                                 "src": "7471:16:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$1334_$",
+                                  "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$1367_$",
                                   "typeString": "type(contract IERC1155Receiver)"
                                 }
                               },
@@ -25895,7 +25895,7 @@
                               "src": "7471:20:0",
                               "tryCall": false,
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_IERC1155Receiver_$1334",
+                                "typeIdentifier": "t_contract$_IERC1155Receiver_$1367",
                                 "typeString": "contract IERC1155Receiver"
                               }
                             },
@@ -25906,7 +25906,7 @@
                             "lValueRequested": false,
                             "memberName": "onERC1155BatchReceived",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1333,
+                            "referencedDeclaration": 1366,
                             "src": "7471:43:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_array$_t_uint256_$dyn_memory_ptr_$_t_array$_t_uint256_$dyn_memory_ptr_$_t_bytes_memory_ptr_$returns$_t_bytes4_$",
@@ -32420,7 +32420,7 @@
           },
           {
             "baseFunctions": [
-              1345
+              1378
             ],
             "body": {
               "id": 1274,
@@ -32879,7 +32879,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-08-04T07:48:24.263Z",
+  "updatedAt": "2021-08-04T13:23:39.932Z",
   "devdoc": {
     "kind": "dev",
     "methods": {
