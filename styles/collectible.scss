@@ -1,0 +1,35 @@
+$dark-blue: rgb(22, 34, 53);
+$light-blue: rgb(45, 129, 255);
+.big-collectible {
+    text-align: center;
+    > img {
+        margin: 0 auto;
+        display: block;
+        width: 250px;
+        height: 250px;
+        border-radius: 0.5em;
+    }
+    a {
+        cursor: pointer;
+        margin: 0.5em;
+        padding: 0.4em;
+        font-size: 18px;
+        text-decoration: none;
+        color: white;
+        border-bottom: 1px solid $light-blue;
+    }
+    .alert {
+        display: block;
+        background-color: $dark-blue;
+        width: min-content;
+        margin: 0 auto;
+        border-radius: 1em;
+        > p {
+            display: block;
+            color: $light-blue;
+            padding: 1em 2em;
+            white-space: nowrap;
+            font-size: 18px;
+        }
+    }
+}
