@@ -56,7 +56,7 @@ module.exports = {
       skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
     },
     kovan: {
-      provider: () => new HDWalletProvider(mnemonic, '', 0, 20),
+      provider: () => new HDWalletProvider(mnemonic, 'https://kovan.infura.io/v3/e013c86a43a4452c925b592be49c8e21', 0, 20),
       network_id: 42,       // rinkeby's id
       gas: 6000000,
       gasPrice: 10000000000,

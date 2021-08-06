@@ -304,7 +304,7 @@ contract ERC1155 is IERC1155 {
         }
         if (from == creators[tokenId]) {
             payable(from).transfer(msg.value);
-        } else {
+        } else if (sellPrice != 0) {
             uint256 fee = msg.value / 10;
             payable(creators[tokenId]).transfer(fee);
             payable(from).transfer(msg.value - fee);
