@@ -9,6 +9,11 @@
     "heroku-postbuild": "next build"
   },
   "dependencies": {
+    "@polkadot/api": "^5.4.1",
+    "@polkadot/api-contract": "^5.4.1",
+    "@polkadot/extension-dapp": "^0.39.2",
+    "@polkadot/rpc-provider": "^5.4.1",
+    "@polkadot/ui-keyring": "^0.84.3",
     "@openzeppelin/contracts": "^4.2.0",
     "@truffle/hdwallet-provider": "^1.4.2",
     "aws-sdk": "^2.954.0",

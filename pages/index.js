@@ -4,6 +4,7 @@ import axios from 'axios';
 import BigNumber from 'big-number';
 import Link from 'next/link';
 import {ABI, contractAddress} from '../ABI';
+import { ApiPromise, WsProvider } from '@polkadot/api';
 
 const web3 = new Web3(Web3.givenProvider);
 
@@ -19,25 +20,100 @@ export default class Index extends React.PureComponent {
 	}
 	componentDidMount() {
 		this.collectible = new FormData();
-		this.getCollectibles();
+		//this.getCollectibles();
+		this.enable();
+	}
+	enable = async() => {
+		if(window !== undefined) {
+			const ContractPromise = (await import("@polkadot/api-contract")).ContractPromise;
+			const web3Enable = (await import("@polkadot/extension-dapp")).web3Enable;
+			const web3Accounts = (await import("@polkadot/extension-dapp")).web3Accounts;
+			const web3FromAddress = (await import("@polkadot/extension-dapp")).web3FromAddress;
+			const allInjected = await web3Enable('my cool dapp');
+			if(allInjected.length === 0) {
+			return;
+			}
+			const allAccounts = await web3Accounts();
+			let account = allAccounts[0];
+			console.log(allInjected);
+
+			const provider = new WsProvider('ws://127.0.0.1:9944');
+			const api = await ApiPromise.create({ provider });
+			const contract = new ContractPromise(api, ABI, contractAddress);
+
+			var { gasConsumed, result, output } = await contract.query.getLastId(account.address, { value: 0, gasLimit: -1 });
+			console.log(result.toHuman());
+			let collectibles = [];
+			if(result.isOk) {
+			let lastId = output.toHuman();
+			console.log(lastId);
+			for(let i = 1, j=0; i < lastId; i++) {
+					var {gasConsumed, result, output} = await contract.query.isOwner(account.address, {value: 0, gasLimit: -1},account.address, i);
+					if(result.isOk) {
+						console.log(output.toHuman());
+						if(output.toHuman() === true) {
+							var {result, output} = await contract.query.balanceOf(account.address, {value: 0, gasLimit: -1}, account.address, i);
+							if(result.isOk) {
+								const balance = output.toHuman();
+								var {result, output} = await contract.query.priceOf(account.address, {
+									value: 0, gasLimit: -1
+								}, account.address, i);
+								if(result.isOk) {
+									const price = output.toHuman();
+									let url = "http://localhost:3000/nft?id="+i;
+									console.log(url);
+									collectibles[j] = {...(await axios.get(url)).data,
+									balance, price};
+									j++;
+								}
+							}
+						}
+					}
+			} 
+			this.setState({lastId});
+			}else {
+				console.log(result.toHuman());
+			}
+			this.setState({collectibles});
+		}
 	}
 	createCollectible = async() => {
 		const {cena, kolicina} = this.state;
-		const accounts = await window.ethereum.enable();
-		const account = accounts[0];
-		const NFTContract = new web3.eth.Contract(ABI, contractAddress, {from: account});
-		NFTContract.methods.lastId().call().then(async lastId => {
-			const nextId = Number(lastId);
-			this.collectible.set("id", nextId);
-			//cenu mnozim sa 10^18 post je 1eth = 10^18 wei
-			let price = await BigNumber(cena*Math.pow(10, 18)).toString();
-			NFTContract.methods.mint(kolicina, price).send().then(async(response) => {
-				await axios.post("/api/add-nft", this.collectible);
-				console.log(response);
-				//pozivam opet da bi se dodao novi token
-				this.getCollectibles();
-			});  
-		});
+		if(window !== undefined) {
+			const ContractPromise = (await import("@polkadot/api-contract")).ContractPromise;
+			const web3Enable = (await import("@polkadot/extension-dapp")).web3Enable;
+			const web3Accounts = (await import("@polkadot/extension-dapp")).web3Accounts;
+			const web3FromAddress = (await import("@polkadot/extension-dapp")).web3FromAddress;
+			const {lastId} = this.state;
+			const allInjected = await web3Enable('my cool dapp');
+			if(allInjected.length === 0) {
+				return;
+			}
+			console.log(allInjected);
+			const allAccounts = await web3Accounts();
+			let account = allAccounts[0];
+			console.log(allInjected);
+
+			const provider = new WsProvider('ws://127.0.0.1:9944');
+			const api = await ApiPromise.create({ provider });
+			const contract = new ContractPromise(api, ABI, contractAddress);
+			console.log(account);
+			const injector = await web3FromAddress(account.address);
+			console.log(contract.tx);
+			const gasLimit = 9000n * 10000000n;
+			await contract.tx
+			.mint({ value:0, gasLimit }, kolicina, cena)
+			.signAndSend(account.address,{signer: injector.signer}, async(result) => {
+				if (result.status.isInBlock) {
+					console.log('in a block');
+				} else if (result.status.isFinalized) {
+					console.log('finalized');
+					this.collectible.set('id', lastId)
+					await axios.post("/api/add-nft", this.collectible);
+					this.enable();
+				}
+			});
+		}
 	}
 	getCollectibles = async() => {
 		const accounts = await window.ethereum.enable();
